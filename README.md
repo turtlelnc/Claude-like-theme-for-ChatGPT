@@ -23,7 +23,7 @@ This is an unofficial community project. It is not affiliated with or endorsed b
 2. Open `chrome://extensions` in Chrome.
 3. Enable **Developer mode**.
 4. Click **Load unpacked**.
-5. Select the repository folder containing `manifest.json`.
+5. Select the repository folder containing `manifest.json` and `theme.css` .(You can download these two files manually on the code page, or you can jump to our [Github Release](https://github.com/turtlelnc/Claude-like-theme-for-ChatGPT./releases/tag/0.14.9)
 6. Refresh `chatgpt.com`.
 
 > In order to make your loading smoother and more convenient, you can directly download our extension file `ctflc.crx`, and after enabling **Developer Mode**, directly drag it in to load. Since we are very poor and do not have any money to register for the Google App Store, you may be warned that it is **"unsafe"** when you use it for the first time. Please follow the prompts to continue adding. If it really cannot be loaded, please choose the original solution, download the `manifest.json` file and `theme.css` file, and put them into a new clean folder and load them. Thank you.
