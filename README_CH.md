@@ -1,5 +1,7 @@
 README:[Chinese 中文](https://github.com/turtlelnc/Claude-like-theme-for-ChatGPT./blob/main/README_CH.md)|[English 英语](https://github.com/turtlelnc/Claude-like-theme-for-ChatGPT./blob/main/README.md)
 
+<img width="1457" height="886" alt="image" src="https://github.com/user-attachments/assets/1b2222df-610f-4e3d-8826-186df8a5ea20" />
+
 # 仿 Claude 风格的 ChatGPT 主题
 
 为 ChatGPT 网站打造的、风格温暖且类似 Claude 的视觉主题。
