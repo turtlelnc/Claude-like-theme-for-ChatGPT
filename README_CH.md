@@ -23,7 +23,7 @@ README:[Chinese 中文](https://github.com/turtlelnc/Claude-like-theme-for-ChatG
 2. 在 Chrome 浏览器中打开 `chrome://extensions`。
 3. 启用**开发者模式**。
 4. 点击**加载已解压的扩展程序**。
-5. 选择包含 `manifest.json` 文件 与 `theme.css` 文件 的仓库文件夹。
+5. 选择包含 `manifest.json` 文件 与 `theme.css` 文件 的仓库文件夹。（关于这两个文件的下载可以在代码页手动操作，也可以跳转到我们的 [Github Release](https://github.com/turtlelnc/Claude-like-theme-for-ChatGPT./releases/tag/0.14.9)
 6. 刷新 `chatgpt.com` 页面。
 
 > 为了使您加载更顺畅、更方便，您可以直接下载我们的扩展文件 `ctlc.crx` ，并在启用**开发者模式**后，直接拖入加载。由于我们十分贫穷，并没有任何钱财注册Google应用商店，您首次使用时，可莪能会警告您 **“不安全”**，请按提示继续添加。如实在无法加载，请您直接选择原来方案，下载`manifest.json` 文件 与 `theme.css` 文件，并把它们放到一个新的干净的文件夹中，给他加载谢谢。
