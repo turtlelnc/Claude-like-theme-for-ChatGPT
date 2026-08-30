@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT UI Scanner",
+  "version": "0.4.0",
+  "description": "Tracks root, pseudo-element and local CSS-token sources of near-black ChatGPT UI surfaces.",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ChatGPT UI Scanner"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://www.chatgpt.com/*"
+      ],
+      "js": [
+        "scanner.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
