@@ -1,4 +1,4 @@
-README:[Chinese 中文](https://github.com/turtlelnc/Claude-like-theme-for-ChatGPT./blob/main/README_CH.md)|[English 英语](https://github.com/turtlelnc/Claude-like-theme-for-ChatGPT./blob/main/README.md)
+README:[Chinese 中文](https://github.com/turtlelnc/Claude-like-theme-for-ChatGPT/blob/main/README_CH.md)|[English 英语](https://github.com/turtlelnc/Claude-like-theme-for-ChatGPT/blob/main/README.md)
 
 <img width="1457" height="886" alt="image" src="https://github.com/user-attachments/assets/1b2222df-610f-4e3d-8826-186df8a5ea20" />
 
