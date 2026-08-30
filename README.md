@@ -26,6 +26,8 @@ This is an unofficial community project. It is not affiliated with or endorsed b
 5. Select the repository folder containing `manifest.json`.
 6. Refresh `chatgpt.com`.
 
+> In order to make your loading smoother and more convenient, you can directly download our extension file `ctflc.crx`, and after enabling **Developer Mode**, directly drag it in to load. Since we are very poor and do not have any money to register for the Google App Store, you may be warned that it is **"unsafe"** when you use it for the first time. Please follow the prompts to continue adding. If it really cannot be loaded, please choose the original solution, download the `manifest.json` file and `theme.css` file, and put them into a new clean folder and load them. Thank you.
+
 ## Current version
 
 `0.14.9`
