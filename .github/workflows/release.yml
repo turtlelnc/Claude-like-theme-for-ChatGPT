@@ -16,6 +16,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Sync manifest versions from tag
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="${GITHUB_REF_NAME#v}"
+
+          node <<'NODE'
+          const fs = require('fs');
+          const version = process.env.GITHUB_REF_NAME.replace(/^v/, '');
+          for (const file of ['manifest.json', 'tools/ui-scanner/manifest.json']) {
+            const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+            data.version = version;
+            fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+          }
+          NODE
+
+          echo "Packaging version ${VERSION}"
+
       - name: Build ZIP packages
         shell: bash
         run: |
