@@ -1,0 +1,71 @@
+name: Package release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build ZIP packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          mkdir -p dist/theme dist/scanner
+
+          cp manifest.json theme.css dist/theme/
+          cp tools/ui-scanner/manifest.json \
+             tools/ui-scanner/popup.html \
+             tools/ui-scanner/popup.js \
+             tools/ui-scanner/scanner.js \
+             tools/ui-scanner/README.md \
+             dist/scanner/
+
+          (
+            cd dist/theme
+            zip -9 -r "../Claude-like-theme-for-ChatGPT-${TAG}.zip" .
+          )
+
+          (
+            cd dist/scanner
+            zip -9 -r "../ChatGPT-UI-Scanner-${TAG}.zip" .
+          )
+
+          cd dist
+          sha256sum *.zip > SHA256SUMS.txt
+
+      - name: Upload workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-packages-${{ github.ref_name }}
+          path: |
+            dist/*.zip
+            dist/SHA256SUMS.txt
+
+      - name: Create GitHub Release and upload packages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/*.zip dist/SHA256SUMS.txt --clobber
+          else
+            gh release create "$TAG" \
+              dist/*.zip \
+              dist/SHA256SUMS.txt \
+              --title "$TAG" \
+              --generate-notes
+          fi
